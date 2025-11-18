@@ -63,3 +63,36 @@ str5 = str3 * 3  # 字符串重复
 print(str5)
 str6 = "Hello, World!"
 print(str6[7:12])  # 字符串切片，输出World
+
+# 格式化字符串
+# 1.占位符
+# %s 字符串, %d 整数, %f 浮点数
+name = "Alice"
+age = 25
+print("Hello, %s! %d岁\n" %(name, age)) # 等效于 print("Hello, " + name + "!" + " " + age + "岁\n")
+# 2.format方法
+print("Hello, {}! {}岁\n".format(name, age))
+# 2(2).设置指定位置
+print("Hello, {1}! {0}岁\n".format(age, name))
+# 3.f-string字符串
+print(f"Hello, {name}! {age}岁\n")
+
+# 常用字符串操作函数/方法
+string_a = "Hello, Python!"
+# len() 获取字符串长度
+print(len(string_a))
+# count() 统计子字符串出现次数
+print(string_a.count("o"))
+# upper() 转为大写
+print(string_a.upper())
+# lower() 转为小写
+print(string_a.lower())
+# isupper() 判断是否全为大写 / islower() 判断是否全为小写
+print(string_a.isupper())
+# split() 分割字符串，返回列表
+string_a1, string_a2 = string_a.split(",") #以","分割
+print(string_a1)
+print(string_a2)
+# replace() 替换子字符串
+string_b = string_a.replace("Python", "World") #将"Python"替换为"World"
+print(string_b)
